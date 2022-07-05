@@ -92,12 +92,6 @@ sudo vim /etc/rancher/rke2/config.yaml
 ```
 token: K10400a2a885bd2afd9bbf90b3b7e3117f7b9b78393d240bc509699c04e111949d2::server:9b27c71333958cefa9c31ca3c4c3a674
 server: https://192.168.56.2:9345
-tls-san:
-- your-k8s-dns.com
-- 192.168.56.2
-disable: rke2-ingress-nginx
-cni:
-- cilium
 ```
 
 ## start rke2-agent
