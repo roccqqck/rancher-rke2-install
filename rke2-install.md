@@ -99,3 +99,10 @@ server: https://192.168.56.2:9345
 sudo systemctl enable rke2-agent.service
 sudo systemctl start rke2-agent.service
 ```
+
+
+
+## test
+```
+kubectl create deploy nginx --image=nginx:stable
+```
