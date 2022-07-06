@@ -49,7 +49,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 ```
 echo "export PATH=/var/lib/rancher/rke2/bin:$PATH" >> ~/.bashrc
-source >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ```
