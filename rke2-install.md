@@ -13,7 +13,7 @@ vagrant ssh kubenode01
 
 # Server Node
 ```
-curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=1.23  INSTALL_RKE2_TYPE="server" sudo sh -
+curl -sfL https://get.rke2.io | sudo INSTALL_RKE2_CHANNEL=v1.23  INSTALL_RKE2_TYPE="server" sh -
 ```
 
 ## edit ```/etc/rancher/rke2/config.yaml```
@@ -67,7 +67,7 @@ K10400a2a885bd2afd9bbf90b3b7e3117f7b9b78393d240bc509699c04e111949d2::server:9b27
 
 # Agent Node
 ```
-curl -sfL https://get.rke2.io | INSTALL_RKE2_CHANNEL=1.23  INSTALL_RKE2_TYPE="agent" sudo sh -
+curl -sfL https://get.rke2.io | sudo INSTALL_RKE2_CHANNEL=v1.23  INSTALL_RKE2_TYPE="agent" sh -
 ```
 
 ## edit ```/etc/rancher/rke2/config.yaml```
