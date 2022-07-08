@@ -9,7 +9,10 @@ vagrant ssh kubemaster
 vagrant ssh kubenode01
 ```
 
-
+```
+sudo systemctl disable ufw
+sudo systemctl stop ufw
+```
 
 # Server Node
 ```
