@@ -71,6 +71,11 @@ sudo systemctl enable rke2-server.service
 sudo systemctl start rke2-server.service
 ```
 
+## check rke2-server log
+```
+sudo journalctl -u rke2-server -f
+```
+
 
 ## copy kubeconfig file ```/etc/rancher/rke2/rke2.yaml``` to ```$HOME/.kube/config```
 ```
@@ -88,11 +93,14 @@ source ~/.bashrc
 ```
 
 ```
-kubectl get nodes -o wide
+kubectl get nodes -o wide -w
 ```
 ```
 NAME       STATUS   ROLES                       AGE     VERSION          INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
 kmaster1   Ready    control-plane,etcd,master   19m     v1.23.8+rke2r1   192.168.56.101   <none>        Ubuntu 20.04.4 LTS   5.4.0-121-generic   containerd://1.5.13-k3s1
+```
+```
+kubectl get pods -A -o wide -w
 ```
 
 ## show join node token
@@ -262,6 +270,11 @@ curl -sfL https://get.rke2.io | sudo INSTALL_RKE2_CHANNEL=v1.23  INSTALL_RKE2_TY
 ```
 sudo systemctl enable rke2-agent.service
 sudo systemctl start rke2-agent.service
+```
+
+## check rke2-agent log
+```
+sudo journalctl -u rke2-agent -f
 ```
 
 ```
