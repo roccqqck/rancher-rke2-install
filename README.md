@@ -10,9 +10,9 @@ https://kube-vip.io/docs/installation/daemonset/
 
 https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
 
-https://rancher.com/docs/rancher/v2.5/en/installation/resources/k8s-tutorials/infrastructure-tutorials/nginx/
+https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/infrastructure-tutorials/nginx/
 
-
+https://github.com/clemenko/rke_install_blog#automation
 
 
 
@@ -29,3 +29,7 @@ https://rancher.com/docs/rancher/v2.5/en/installation/resources/k8s-tutorials/in
 |kworker1|192.168.56.201|Ubuntu 20.04|1G|1|
 |kworker2|192.168.56.202|Ubuntu 20.04|1G|1|
 |Virtual IP|192.168.56.109|kube-vip / Keepalived|-|-|
+
+
+
+change nodeCount and cpu and memory at ```Vagrantfile```
