@@ -53,7 +53,6 @@ tls-san:
 - 192.168.56.102
 - 192.168.56.103
 - 192.168.56.109
-disable: rke2-ingress-nginx
 cni:
 - canal
 node-ip: 192.168.56.101
@@ -222,7 +221,6 @@ tls-san:
 - 192.168.56.102
 - 192.168.56.103
 - 192.168.56.109
-disable: rke2-ingress-nginx
 cni:
 - canal
 node-ip: 192.168.56.102
