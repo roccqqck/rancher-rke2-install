@@ -78,8 +78,9 @@ rancher            	cattle-system	2       	2022-07-12 06:28:38.049362018 +0000 U
 ```
 sudo vim /etc/hosts/
 ```
-add WorkerNode-ip or LoadBalancer-ip
+add Node-ip or LoadBalancer-ip
 ```
+# Node-ip
 192.168.56.201  rancher.dockr.life
 ```
 
