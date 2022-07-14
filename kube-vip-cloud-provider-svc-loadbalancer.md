@@ -170,4 +170,4 @@ add Node-ip or LoadBalancer-ip
 ```
 
 
-open browser https://nginx-app-ingress.info
+open browser http://nginx-app-ingress.info
