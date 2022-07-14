@@ -30,8 +30,13 @@ kubectl expose deploy nginx --port=80 --type=LoadBalancer
 ```
 kubectl get services -A
 ```
+```
+kubectl get services -A
+NAMESPACE     NAME                                      TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                      AGE
+default       nginx                                     LoadBalancer   10.43.194.94    192.168.56.111   80:30567/TCP                 8m27s
+```
 
-
+open browser http://192.168.56.111 
 
 
 # Config rke2-ingress-nginx service to Type.LoadBalancer
@@ -111,6 +116,47 @@ kube-system   rke2-ingress-nginx-controller-admission   ClusterIP      10.43.2.1
 
 now, we can access ingress from 192.168.56.110 
 
+
+
+## create test ingress
+
+```
+kubectl create deploy nginx --image=nginx:stable
+kubectl expose deploy nginx --port=80 --type=LoadBalancer
+```
+
+```
+vim nginx-ingress.yml
+```
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+spec:
+  rules:
+    - host: nginx-app-ingress.info
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx
+                port:
+                  number: 80  # service port
+```
+```
+kubectl apply -f nginx-ingress.yml
+```
+```
+kubectl get ingress -A -o wide
+```
+```
+NAMESPACE   NAME    CLASS    HOSTS                    ADDRESS          PORTS   AGE
+default     nginx   <none>   nginx-app-ingress.info   192.168.56.101   80      23s
+```
+
 ## set dns or ```/etc/hosts```
 ```
 sudo vim /etc/hosts/
@@ -118,7 +164,10 @@ sudo vim /etc/hosts/
 add Node-ip or LoadBalancer-ip
 ```
 # LoadBalancer-ip
-192.168.56.110  you.ingress1.host.com  
+192.168.56.110  nginx-app-ingress.info  
 # Node-ip
-192.168.56.101  you.ingress2.host.com
+# 192.168.56.101  nginx-app-ingress.info 
 ```
+
+
+open browser https://nginx-app-ingress.info
