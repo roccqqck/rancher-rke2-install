@@ -1,10 +1,13 @@
 # Kube-VIP Cloud Provider Install for Service.Type.LoadBalancer
+https://kube-vip.io/docs/usage/cloud-provider/
+
 ## master node
 ```
 curl -sfL https://raw.githubusercontent.com/kube-vip/kube-vip-cloud-provider/main/manifest/kube-vip-cloud-controller.yaml > /var/lib/rancher/rke2/server/manifests/kube-vip-cloud-controller.yaml
 ```
 
 set Service.Type.LoadBalancer ip range: 192.168.56.111-192.168.56.120 in ```/var/lib/rancher/rke2/server/manifests/kube-vip-config.yaml```
+
 ```
 vim kube-vip-config.yaml
 ```
