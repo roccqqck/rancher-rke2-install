@@ -31,7 +31,7 @@ https://github.com/clemenko/rke_install_blog#automation
 |Virtual IP|192.168.56.50|Keepalived|-|-|
 |Virtual IP|192.168.56.109|kube-vip / kube-apiserver 6443|-|-|
 |Virtual IP|192.168.56.110|kube-vip / ingress 80 443|-|-|
-|IP-RANGE|192.168.56.110|kube-vip Cloud Provider|-|-|
+|IP-RANGE|192.168.56.111-192.168.56.120|kube-vip Cloud Provider|-|-|
 
 
 change nodeCount and cpu and memory at ```Vagrantfile```
