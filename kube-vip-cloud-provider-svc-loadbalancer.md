@@ -63,7 +63,7 @@ https://docs.rke2.io/helm/#customizing-packaged-components-with-helmchartconfig
 kubectl get helmchartconfig -A
 ```
 ```
-NAMESPACE     NAME                 AGE
+No resources found
 ```
 
 
@@ -91,6 +91,13 @@ https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/value
 
 ```
 sudo cp rke2-ingress-nginx-config.yaml /var/lib/rancher/rke2/server/manifests
+```
+```
+kubectl get helmchartconfig -A
+```
+```
+NAMESPACE     NAME                 AGE
+kube-system   rke2-ingress-nginx   37m
 ```
 
 ```
