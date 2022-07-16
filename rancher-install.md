@@ -76,7 +76,7 @@ rancher            	cattle-system	2       	2022-07-12 06:28:38.049362018 +0000 U
 
 ## set dns or ```/etc/hosts```
 ```
-sudo vim /etc/hosts/
+sudo vim /etc/hosts
 ```
 add Node-ip or LoadBalancer-ip
 ```

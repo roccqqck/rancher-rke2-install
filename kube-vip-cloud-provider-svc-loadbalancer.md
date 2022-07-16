@@ -162,7 +162,7 @@ default     nginx   <none>   nginx-app-ingress.info   192.168.56.101   80      2
 
 ## set dns or ```/etc/hosts```
 ```
-sudo vim /etc/hosts/
+sudo vim /etc/hosts
 ```
 add Node-ip or LoadBalancer-ip
 ```
